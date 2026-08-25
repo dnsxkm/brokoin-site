@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap');
+
+:root {
+  --paper:#FBFAFD; --surface:#FFFFFF; --surface-2:#F4F2FA;
+  --ink:#17151F; --ink-2:#4A4655; --ink-3:#78738A;
+  --line:#E5E2ED; --line-2:#D3CFE0;
+  --accent:#5B3DF5; --accent-soft:#EFECFE; --accent-line:#C9BEFB;
+  --warn:#8A5200; --warn-soft:#FFF3DF; --warn-line:#E8C88A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:#131118; --surface:#1B1824; --surface-2:#221E2E;
+    --ink:#EFEDF5; --ink-2:#B4AFC4; --ink-3:#837D96;
+    --line:#2C2838; --line-2:#3A3549;
+    --accent:#9B85FF; --accent-soft:#241E3C; --accent-line:#4B3F7A;
+    --warn:#E0A44A; --warn-soft:#2C2316; --warn-line:#5C4522;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; padding: 0 20px 80px;
+  background: var(--paper); color: var(--ink);
+  font-family: "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  font-size: 16px; line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+
+nav {
+  display: flex; gap: 20px; align-items: center;
+  padding: 22px 0; border-bottom: 1px solid var(--line);
+  font-size: 14.5px;
+}
+nav .brand { font-weight: 700; margin-right: auto; letter-spacing: -.01em; }
+nav a { color: var(--ink-2); text-decoration: none; }
+nav a:hover, nav a:focus-visible { color: var(--accent); text-decoration: underline; }
+
+header { padding: 48px 0 8px; }
+h1 {
+  font-size: clamp(28px, 6vw, 38px); font-weight: 700;
+  letter-spacing: -.022em; line-height: 1.2; text-wrap: balance; margin: 0 0 10px;
+}
+.meta {
+  font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+  color: var(--ink-3); margin: 0;
+}
+.lede { font-size: 17px; color: var(--ink-2); margin: 16px 0 0; }
+
+h2 {
+  font-size: 20px; font-weight: 650; letter-spacing: -.015em;
+  margin: 44px 0 10px; padding-top: 22px; border-top: 1px solid var(--line);
+  text-wrap: balance;
+}
+h3 { font-size: 16.5px; font-weight: 600; margin: 26px 0 6px; }
+p { margin: 0 0 14px; color: var(--ink-2); }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--accent); }
+
+ul { margin: 0 0 14px; padding-left: 20px; color: var(--ink-2); }
+li { margin-bottom: 6px; }
+li::marker { color: var(--ink-3); }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 0 0 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; background: var(--surface); }
+th, td { text-align: left; padding: 11px 15px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th {
+  font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); background: var(--surface-2); white-space: nowrap;
+}
+td { color: var(--ink-2); }
+td:first-child { color: var(--ink); font-weight: 600; }
+
+.note {
+  padding: 16px 19px; border-radius: 11px;
+  background: var(--warn-soft); border: 1px solid var(--warn-line);
+  margin: 0 0 16px;
+}
+.note h3 { margin: 0 0 5px; color: var(--warn); font-size: 15.5px; }
+.note p { margin: 0; font-size: 14.5px; }
+.note p + p { margin-top: 8px; }
+
+.card {
+  padding: 16px 19px; border-radius: 11px;
+  background: var(--surface); border: 1px solid var(--line); margin: 0 0 16px;
+}
+.card p:last-child { margin-bottom: 0; }
+
+.mail {
+  font-family: "IBM Plex Mono", monospace; font-size: 15px;
+  background: var(--accent-soft); border: 1px solid var(--accent-line);
+  border-radius: 8px; padding: 3px 9px; color: var(--accent);
+  text-decoration: none; display: inline-block;
+}
+
+footer {
+  margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+  font-size: 13.5px; color: var(--ink-3);
+}
+.en { margin-top: 56px; padding-top: 26px; border-top: 2px solid var(--line-2); }
+.en h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.en .lang {
+  font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+}
+@media (max-width: 560px) { body { padding: 0 16px 64px; font-size: 15.5px; } }
