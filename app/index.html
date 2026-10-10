@@ -15,31 +15,13 @@
       body {
         overflow: hidden;
         margin: 0;
-        background: #05060a;
+        background: #0a0b10;
       }
-      /*
-        화면은 폰 세로 비율로 짜여 있다. 넓은 창에서는 그대로 늘리지 않고
-        가운데 한 단으로 둔다 — 시세 목록이 1900px로 퍼지면 읽을 수가 없다.
-      */
+      /* 창 전체를 쓴다. 넓은 창에서 단을 나누는 일은 앱(useLayout)이 한다. */
       #root {
         display: flex;
         height: 100%;
         flex: 1;
-        max-width: 480px;
-        margin: 0 auto;
-      }
-      @media (min-width: 481px) {
-        #root {
-          box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-        }
-      }
-      @media (prefers-color-scheme: light) {
-        body {
-          background: #e4e6ee;
-        }
-        #root {
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-        }
       }
     </style>
   <link rel="icon" href="/brokoin-site/app/favicon.ico" /></head>
@@ -47,6 +29,6 @@
   <body>
     <noscript>코인레벨 웹은 JavaScript가 켜져 있어야 합니다.</noscript>
     <div id="root"></div>
-  <script src="/brokoin-site/app/_expo/static/js/web/index-76eba5f54568ab99af054bb1202b9822.js" defer></script>
+  <script src="/brokoin-site/app/_expo/static/js/web/index-f3a4c8dfb07107be12138dd738923eac.js" defer></script>
 </body>
 </html>
